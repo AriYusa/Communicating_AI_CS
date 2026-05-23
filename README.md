@@ -7,12 +7,11 @@ This is a shared frontend project built with **React + Vite** and deployed via *
 - React (Vite)
 - JavaScript (ES6+)
 - Chart.js (for dataset visualization)
-- HTML Canvas (for AI bounding box demo)
 - GitHub Pages (deployment)
 
 ## 📦 Installation
 
-## 1. Install Node.js
+### 1. Install Node.js
 
 Make sure you have **Node.js (LTS)** installed.
 
@@ -27,15 +26,15 @@ If not installed, download it here:
 [https://nodejs.org/](https://nodejs.org/)
 
 
-## 2. Clone the Repository
+### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/hiinomaru/Communicating_AI_CS
+cd Communicating_AI_CS
 ```
 
 
-## 3. Install Dependencies
+### 3. Install Dependencies
 
 This step installs all required libraries (React, Vite, Chart.js, etc.).
 
@@ -44,7 +43,7 @@ npm install
 ```
 
 
-## 4. Start Development Server
+### 4. Start Development Server
 
 Run the project locally:
 
