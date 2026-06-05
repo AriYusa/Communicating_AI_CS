@@ -1,5 +1,10 @@
 export const projects = [
   {
+    name: "Phishing Email Detection using NLP",
+    url: "https://cyber.tiranaictacademy.al",
+    description: "A project that identifies phishing emails using NLP models.",
+  },
+  {
     name: "Fracture Detection",
     url: "https://hiinomaru.github.io/",
     image:
