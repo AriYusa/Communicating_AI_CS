@@ -5,13 +5,13 @@ import { teamMembers } from "../data/teamMembers";
 import styled from "styled-components";
 
 const Page = styled.div`
-  padding: 40px;
   color: white;
   background: #0f172a;
   min-height: 100vh;
 `;
 
 const ProjectsGrid = styled.div`
+  margin: 3rem;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(1, minmax(0, 1fr));

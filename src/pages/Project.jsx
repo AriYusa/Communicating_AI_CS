@@ -50,6 +50,7 @@ const ProjectVideo = styled.video`
   width: 100%;
   max-height: 24rem;
   border-radius: 8px;
+  margin-top: 3rem;
   margin-bottom: 24px;
   background: #000;
 `;
