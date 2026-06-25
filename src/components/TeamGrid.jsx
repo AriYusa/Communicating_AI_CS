@@ -3,7 +3,7 @@ import TeamMemberCard from "./TeamMemberCard";
 
 const Section = styled.section`
   padding: 72px 0;
-  background: #1b1930;
+  background: #0f172a;
 `;
 
 const Container = styled.div`

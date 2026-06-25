@@ -20,9 +20,9 @@ export const teamMembers = [
     avatar: "team/team-4.jpg",
   },
   {
-    name: "Zachary Brown",
-    role: "UI Designer",
-    avatar: "team/team-5.jpg",
+    name: "Amr Mohamed Aboalsaoud",
+    role: "Web Developer",
+    avatar: "team/Amr_Mohamed.jpeg",
   },
   {
     name: "Trinity Page",

@@ -17,14 +17,17 @@ const StyledTitle = styled.div`
 
 const StyledNavigationBar = styled.div`
   display: flex;
-  gap: 12px;
+  gap: 40px;
+  padding-right: 60px;
 `;
 
 const StyledLink = styled.a`
   font-size: 18px;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
   &:hover {
-    text-decoration: underline;
+    transform: scale(1.1);
   }
 `;
 

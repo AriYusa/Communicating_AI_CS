@@ -6,7 +6,7 @@ const Card = styled.article`
 
 const Avatar = styled.img`
   width: 100%;
-  height: 120px;
+  height: 260px;
   object-fit: cover;
   border-radius: 5px;
   display: block;
