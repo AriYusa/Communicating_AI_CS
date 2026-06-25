@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { projects } from "../data/projects";
@@ -55,9 +56,95 @@ const ProjectVideo = styled.video`
   background: #000;
 `;
 
+const CarouselContainer = styled.div`
+  position: relative;
+  width: 100%;
+  margin: 24px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1e293b;
+`;
+
+const CarouselImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 44rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const CarouselImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+`;
+
+const NavButton = styled.button`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(59, 130, 246, 0.8);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 10;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba(37, 99, 235, 0.9);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  ${(props) => (props.left ? "left: 16px;" : "right: 16px;")}
+`;
+
+const DotsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  background: #1e293b;
+`;
+
+const Dot = styled.button`
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: ${(props) => (props.active ? "#3b82f6" : "#64748b")};
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #3b82f6;
+  }
+`;
+
+const SlideCounter = styled.div`
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 10;
+`;
+
 export default function Projects() {
   const { id } = useParams();
   const project = projects.find((p) => p.uri === id);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   if (!project) {
     return (
@@ -66,6 +153,41 @@ export default function Projects() {
       </Page>
     );
   }
+
+  const handleNextSlide = () => {
+    if (project.slides && project.slides.length > 0) {
+      setCurrentSlide((prev) => (prev + 1) % project.slides.length);
+    }
+  };
+
+  const handlePrevSlide = () => {
+    if (project.slides && project.slides.length > 0) {
+      setCurrentSlide((prev) =>
+        prev === 0 ? project.slides.length - 1 : prev - 1
+      );
+    }
+  };
+
+  // Keyboard navigation for carousel
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (project.slides && project.slides.length > 0) {
+        if (e.key === "ArrowLeft") {
+          handlePrevSlide();
+        } else if (e.key === "ArrowRight") {
+          handleNextSlide();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [currentSlide, project.slides, handleNextSlide, handlePrevSlide]);
+
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
 
   return (
     <Page>
@@ -92,11 +214,58 @@ export default function Projects() {
           Go to Website
         </ProjectWebsiteButton>
       )}
+      
       {project.videoUrl && (
         <ProjectVideo controls>
           <source src={project.videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </ProjectVideo>
+      )}
+
+      {project.slides && project.slides.length > 0 && (
+        <div>
+          <CarouselContainer>
+            <CarouselImageWrapper>
+              <CarouselImage
+                src={project.slides[currentSlide]}
+                alt={`Slide ${currentSlide + 1}`}
+              />
+              <SlideCounter>
+                {currentSlide + 1} / {project.slides.length}
+              </SlideCounter>
+              {project.slides.length > 1 && (
+                <>
+                  <NavButton
+                    left
+                    onClick={handlePrevSlide}
+                    aria-label="Previous slide"
+                  >
+                    ❮
+                  </NavButton>
+                  <NavButton
+                    onClick={handleNextSlide}
+                    aria-label="Next slide"
+                  >
+                    ❯
+                  </NavButton>
+                </>
+              )}
+            </CarouselImageWrapper>
+          </CarouselContainer>
+
+          {project.slides.length > 1 && (
+            <DotsContainer>
+              {project.slides.map((_, index) => (
+                <Dot
+                  key={index}
+                  active={index === currentSlide}
+                  onClick={() => goToSlide(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </DotsContainer>
+          )}
+        </div>
       )}
     </Page>
   );

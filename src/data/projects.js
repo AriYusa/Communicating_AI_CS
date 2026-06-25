@@ -33,4 +33,19 @@ export const projects = [
       "An Optical Character Recognition (OCR) system that transforms handwritten text into digital content using deep learning",
     text: "The project 'Ink to Digital Intelligence,' is a sophisticated Optical Character Recognition (OCR) system designed to accurately digitize handwritten text. Utilizing a robust system pipeline implemented in PyTorch, the project employs an attention-based model to handle the nuances of character recognition. After extensive training, the model demonstrated high performance on a validation set of 41,292 samples, achieving a validation accuracy of 84.01% and a Character Error Rate (CER) of 4.39%. This capability is showcased through the successful recognition of diverse handwritten names However, the system faces specific technical challenges, such as handling 'unreadable' inputs that may result in empty or incorrect predictions, and managing 'visual noise' from pre-printed form labels like 'NOM:' or 'PRENOM:' that can interfere with handwriting extraction. Additionally, character ambiguity the subtle differences in how individuals write remains a primary factor contributing to the remaining error rate. Ultimately, the project provides a comprehensive look at the pipeline, dataset training, and performance metrics required to transform physical handwriting into digital intelligence.",
   },
+  {
+    name: "Slides Project",
+    uri: "slides-project",
+    description: "Test project to test slides visualization",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula elit a velit facilisis aliquet. Quisque iaculis imperdiet magna quis dignissim. Quisque id tortor et ipsum elementum commodo. Integer euismod nunc sed mattis ultricies. Aenean nec rutrum eros, ut placerat nisl. Vivamus luctus cursus lorem. Nunc maximus volutpat dui, luctus venenatis dui.\n\nNullam commodo hendrerit convallis. Fusce consequat elementum dignissim. Curabitur ultricies neque sed diam molestie, at vehicula ex porta. Nullam vel iaculis diam. Maecenas elementum dignissim lectus vel ornare. Morbi at urna molestie, sodales neque sed, varius lectus. Nunc lectus augue, dignissim quis congue et, porttitor vel leo. Cras vulputate ullamcorper orci, a convallis ipsum ultrices commodo.",
+    slides: [
+     "https://powerpointschool.com/wp-content/uploads/2018/05/Animated-PowerPoint-Presentation-Slide-Template-by-PowerPoint-School.png",
+     "https://www.slideegg.com/image/catalog/100860-best-ppt-templates-for-project-presentation.png",
+     "https://powerpointschool.com/wp-content/uploads/2018/05/Animated-PowerPoint-Presentation-Slide-Template-by-PowerPoint-School.png",
+     "https://powerpointschool.com/wp-content/uploads/2018/05/Animated-PowerPoint-Presentation-Slide-Template-by-PowerPoint-School.png",
+     "https://powerpointschool.com/wp-content/uploads/2018/05/Animated-PowerPoint-Presentation-Slide-Template-by-PowerPoint-School.png",
+     "https://powerpointschool.com/wp-content/uploads/2018/05/Animated-PowerPoint-Presentation-Slide-Template-by-PowerPoint-School.png",
+     "https://powerpointschool.com/wp-content/uploads/2018/05/Animated-PowerPoint-Presentation-Slide-Template-by-PowerPoint-School.png",
+    ]
+  },
 ];
