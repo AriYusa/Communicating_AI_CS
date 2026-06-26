@@ -47,13 +47,20 @@ const ProjectWebsiteButton = styled.a`
   }
 `;
 
-const ProjectVideo = styled.video`
+const ProjectVideoContainer = styled.div`
   width: 100%;
-  max-height: 24rem;
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
   margin-top: 3rem;
   margin-bottom: 24px;
   background: #000;
+  overflow: hidden;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 `;
 
 const CarouselContainer = styled.div`
@@ -198,11 +205,15 @@ export default function Projects() {
 
       {project.image && <ProjectImage src={project.image} alt={project.name} />}
 
-      {project.video && (
-        <ProjectVideo controls poster={project.image}>
-          <source src={project.video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </ProjectVideo>
+      {project.videoUrl && (
+        <ProjectVideoContainer>
+          <iframe
+            src={project.videoUrl}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </ProjectVideoContainer>
       )}
 
       {project.website && (
@@ -213,13 +224,6 @@ export default function Projects() {
         >
           Go to Website
         </ProjectWebsiteButton>
-      )}
-      
-      {project.videoUrl && (
-        <ProjectVideo controls>
-          <source src={project.videoUrl} type="video/mp4" />
-          Your browser does not support the video tag.
-        </ProjectVideo>
       )}
 
       {project.slides && project.slides.length > 0 && (

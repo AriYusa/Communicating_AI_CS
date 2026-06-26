@@ -37,7 +37,16 @@ const ProjectImage = styled.img`
   margin-bottom: 12px;
 `;
 
-const ProjectCard = ({ name, description, uri, image }) => {
+const ProjectVideo = styled.iframe`
+  width: 100%;
+  height: 10rem;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: none;
+  background: #000;
+`;
+
+const ProjectCard = ({ name, description, uri, image, videoUrl }) => {
   const navigate = useNavigate();
 
   const onCardTitleClick = (uri) => {
@@ -46,7 +55,16 @@ const ProjectCard = ({ name, description, uri, image }) => {
 
   return (
     <CardContainer>
-      {image ? <ProjectImage src={image} alt={name} /> : null}
+      {videoUrl ? (
+        <ProjectVideo
+          src={videoUrl}
+          title={name}
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      ) : image ? (
+        <ProjectImage src={image} alt={name} />
+      ) : null}
       <ProjectName onClick={() => onCardTitleClick(uri)}>{name}</ProjectName>
       <ProjectDescription>{description}</ProjectDescription>
     </CardContainer>

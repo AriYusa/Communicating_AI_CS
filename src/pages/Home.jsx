@@ -38,6 +38,7 @@ export default function Home() {
             uri={p.uri}
             description={p.description}
             image={p.image}
+            videoUrl={p.videoUrl}
           />
         ))}
       </ProjectsGrid>
