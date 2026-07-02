@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { resolveAssetPath } from "../utils/assetPath";
 
 const CardContainer = styled.div`
   display: block;
@@ -21,6 +22,12 @@ const ProjectName = styled.span`
   :hover {
     text-decoration: underline;
   }
+`;
+
+const ProjectAuthor = styled.p`
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: #94a3b8;
 `;
 
 const ProjectDescription = styled.p`
@@ -46,7 +53,7 @@ const ProjectVideo = styled.iframe`
   background: #000;
 `;
 
-const ProjectCard = ({ name, description, uri, image, videoUrl }) => {
+const ProjectCard = ({ name, description, uri, image, videoUrl, authorName }) => {
   const navigate = useNavigate();
 
   const onCardTitleClick = (uri) => {
@@ -63,9 +70,10 @@ const ProjectCard = ({ name, description, uri, image, videoUrl }) => {
           allowFullScreen
         />
       ) : image ? (
-        <ProjectImage src={image} alt={name} />
+        <ProjectImage src={resolveAssetPath(image)} alt={name} />
       ) : null}
       <ProjectName onClick={() => onCardTitleClick(uri)}>{name}</ProjectName>
+      {authorName && <ProjectAuthor>By {authorName}</ProjectAuthor>}
       <ProjectDescription>{description}</ProjectDescription>
     </CardContainer>
   );

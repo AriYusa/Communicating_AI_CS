@@ -28,7 +28,7 @@ const ProjectsGrid = styled.div`
 export default function Home() {
   return (
     <Page>
-      <h1>AI&CS Projects</h1>
+      <h1>I spy with my little AI</h1>
 
       <ProjectsGrid>
         {projects.map((p, i) => (
@@ -39,6 +39,7 @@ export default function Home() {
             description={p.description}
             image={p.image}
             videoUrl={p.videoUrl}
+            authorName={p.authorName}
           />
         ))}
       </ProjectsGrid>

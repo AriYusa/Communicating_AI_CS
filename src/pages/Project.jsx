@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { projects } from "../data/projects";
+import { resolveAssetPath } from "../utils/assetPath";
 
 const Page = styled.div`
   padding: 40px;
@@ -12,6 +13,12 @@ const Page = styled.div`
 
 const ProjectName = styled.h1`
   margin-bottom: 16px;
+`;
+
+const ProjectAuthor = styled.p`
+  margin-bottom: 16px;
+  color: #94a3b8;
+  font-size: 0.95rem;
 `;
 
 const ProjectDescription = styled.p`
@@ -60,6 +67,33 @@ const ProjectVideoContainer = styled.div`
     width: 100%;
     height: 100%;
     border: none;
+  }
+`;
+
+const ProjectSlidesContainer = styled.div`
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  margin-top: 3rem;
+  margin-bottom: 8px;
+  background: #1e293b;
+  overflow: hidden;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+`;
+
+const ProjectSlidesFallback = styled.a`
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+
+  &:hover {
+    color: #cbd5e1;
   }
 `;
 
@@ -199,11 +233,14 @@ export default function Projects() {
   return (
     <Page>
       <ProjectName>{project.name}</ProjectName>
+      {project.authorName && <ProjectAuthor>By {project.authorName}</ProjectAuthor>}
       <ProjectDescription>{project.description}</ProjectDescription>
 
       {project.text && <ProjectText>{project.text}</ProjectText>}
 
-      {project.image && <ProjectImage src={project.image} alt={project.name} />}
+      {project.image && (
+        <ProjectImage src={resolveAssetPath(project.image)} alt={project.name} />
+      )}
 
       {project.videoUrl && (
         <ProjectVideoContainer>
@@ -214,6 +251,24 @@ export default function Projects() {
             allowFullScreen
           />
         </ProjectVideoContainer>
+      )}
+
+      {project.slidesUrl && (
+        <>
+          <ProjectSlidesContainer>
+            <iframe
+              src={resolveAssetPath(project.slidesUrl)}
+              title="Presentation slides"
+            />
+          </ProjectSlidesContainer>
+          <ProjectSlidesFallback
+            href={resolveAssetPath(project.slidesUrl)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open slides in a new tab ↗
+          </ProjectSlidesFallback>
+        </>
       )}
 
       {project.website && (

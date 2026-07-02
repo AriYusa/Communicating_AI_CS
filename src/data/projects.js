@@ -2,30 +2,33 @@ export const projects = [
   {
     name: "Phishing Email Detection using NLP",
     uri: "phishing-email-detection",
+    authorName: "Klodian Matjani",
+    website: "https://klodianm12.github.io/cyber-ml/",
+    image: "card_covers/klodian-matjani.png",
     description: "A project that identifies phishing emails using NLP models.",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula elit a velit facilisis aliquet. Quisque iaculis imperdiet magna quis dignissim. Quisque id tortor et ipsum elementum commodo. Integer euismod nunc sed mattis ultricies. Aenean nec rutrum eros, ut placerat nisl. Vivamus luctus cursus lorem. Nunc maximus volutpat dui, luctus venenatis dui.\n\nNullam commodo hendrerit convallis. Fusce consequat elementum dignissim. Curabitur ultricies neque sed diam molestie, at vehicula ex porta. Nullam vel iaculis diam. Maecenas elementum dignissim lectus vel ornare. Morbi at urna molestie, sodales neque sed, varius lectus. Nunc lectus augue, dignissim quis congue et, porttitor vel leo. Cras vulputate ullamcorper orci, a convallis ipsum ultrices commodo. Aliquam sit amet tellus sed nulla dictum condimentum ac nec tellus. Cras fringilla nisi vulputate sapien ullamcorper, sit amet volutpat odio pretium.\n\nProin luctus mauris dapibus elit consequat posuere. Donec cursus sed tellus et commodo. Donec id lectus diam. Fusce sed magna ipsum. Curabitur feugiat lacinia purus, eget bibendum eros ornare non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet nulla a felis molestie commodo et non justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean eleifend urna sit amet massa volutpat, ut bibendum elit ultricies. Nunc ornare pretium dolor a malesuada. Sed eget eros massa. Nullam ornare, augue vel volutpat vestibulum, mauris nisl dignissim ex, eget porttitor dolor ipsum non tortor. Cras sit amet tellus elementum, molestie lacus id, lobortis sem. Praesent vel dapibus tortor. Duis laoreet metus nulla, sit amet finibus turpis placerat eget.",
   },
   {
     name: "Fracture Detection",
     uri: "fracture-detection",
+    authorName: "Igor Starikov",
     website: "https://hiinomaru.github.io/",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-X7tW-_kQR-4eXya7J1MXb5txqMn53wHQ0w&s",
     description:
       "A project that detects fractures in medical images using deep learning.",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula elit a velit facilisis aliquet. Quisque iaculis imperdiet magna quis dignissim. Quisque id tortor et ipsum elementum commodo. Integer euismod nunc sed mattis ultricies. Aenean nec rutrum eros, ut placerat nisl. Vivamus luctus cursus lorem. Nunc maximus volutpat dui, luctus venenatis dui.\n\nNullam commodo hendrerit convallis. Fusce consequat elementum dignissim. Curabitur ultricies neque sed diam molestie, at vehicula ex porta. Nullam vel iaculis diam. Maecenas elementum dignissim lectus vel ornare. Morbi at urna molestie, sodales neque sed, varius lectus. Nunc lectus augue, dignissim quis congue et, porttitor vel leo. Cras vulputate ullamcorper orci, a convallis ipsum ultrices commodo. Aliquam sit amet tellus sed nulla dictum condimentum ac nec tellus. Cras fringilla nisi vulputate sapien ullamcorper, sit amet volutpat odio pretium.\n\nProin luctus mauris dapibus elit consequat posuere. Donec cursus sed tellus et commodo. Donec id lectus diam. Fusce sed magna ipsum. Curabitur feugiat lacinia purus, eget bibendum eros ornare non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet nulla a felis molestie commodo et non justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean eleifend urna sit amet massa volutpat, ut bibendum elit ultricies. Nunc ornare pretium dolor a malesuada. Sed eget eros massa. Nullam ornare, augue vel volutpat vestibulum, mauris nisl dignissim ex, eget porttitor dolor ipsum non tortor. Cras sit amet tellus elementum, molestie lacus id, lobortis sem. Praesent vel dapibus tortor. Duis laoreet metus nulla, sit amet finibus turpis placerat eget.",
   },
   {
     name: "WebSecAI",
     uri: "websecai",
+    authorName: "Beatrice Beacco",
     description:
       "A project that automates web security testing using an agentic AI framework.",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula elit a velit facilisis aliquet. Quisque iaculis imperdiet magna quis dignissim. Quisque id tortor et ipsum elementum commodo. Integer euismod nunc sed mattis ultricies. Aenean nec rutrum eros, ut placerat nisl. Vivamus luctus cursus lorem. Nunc maximus volutpat dui, luctus venenatis dui.\n\nNullam commodo hendrerit convallis. Fusce consequat elementum dignissim. Curabitur ultricies neque sed diam molestie, at vehicula ex porta. Nullam vel iaculis diam. Maecenas elementum dignissim lectus vel ornare. Morbi at urna molestie, sodales neque sed, varius lectus. Nunc lectus augue, dignissim quis congue et, porttitor vel leo. Cras vulputate ullamcorper orci, a convallis ipsum ultrices commodo. Aliquam sit amet tellus sed nulla dictum condimentum ac nec tellus. Cras fringilla nisi vulputate sapien ullamcorper, sit amet volutpat odio pretium.\n\nProin luctus mauris dapibus elit consequat posuere. Donec cursus sed tellus et commodo. Donec id lectus diam. Fusce sed magna ipsum. Curabitur feugiat lacinia purus, eget bibendum eros ornare non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet nulla a felis molestie commodo et non justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean eleifend urna sit amet massa volutpat, ut bibendum elit ultricies. Nunc ornare pretium dolor a malesuada. Sed eget eros massa. Nullam ornare, augue vel volutpat vestibulum, mauris nisl dignissim ex, eget porttitor dolor ipsum non tortor. Cras sit amet tellus elementum, molestie lacus id, lobortis sem. Praesent vel dapibus tortor. Duis laoreet metus nulla, sit amet finibus turpis placerat eget.",
     videoUrl: "https://www.youtube.com/embed/BpbVcShkGDY",
   },
   {
     name: "Ink to Digital Intelligence",
     uri: "ink-to-digital-intelligence",
+    authorName: "Amr Mohamed Aboalsaoud",
     website: "https://amromohabosaoud.github.io/OCR_Application/",
     image:
       "https://image.pollinations.ai/prompt/Optical%20character%20recognition%20scanner%20reading%20handwriting%20dark%20blue%20neon%20theme?width=800&height=500&nologo=true",
@@ -34,10 +37,87 @@ export const projects = [
     text: "The project 'Ink to Digital Intelligence,' is a sophisticated Optical Character Recognition (OCR) system designed to accurately digitize handwritten text. Utilizing a robust system pipeline implemented in PyTorch, the project employs an attention-based model to handle the nuances of character recognition. After extensive training, the model demonstrated high performance on a validation set of 41,292 samples, achieving a validation accuracy of 84.01% and a Character Error Rate (CER) of 4.39%. This capability is showcased through the successful recognition of diverse handwritten names However, the system faces specific technical challenges, such as handling 'unreadable' inputs that may result in empty or incorrect predictions, and managing 'visual noise' from pre-printed form labels like 'NOM:' or 'PRENOM:' that can interfere with handwriting extraction. Additionally, character ambiguity the subtle differences in how individuals write remains a primary factor contributing to the remaining error rate. Ultimately, the project provides a comprehensive look at the pipeline, dataset training, and performance metrics required to transform physical handwriting into digital intelligence.",
   },
   {
+    name: "AI Assistant for Hospital Information Systems",
+    uri: "ai-assistant-hospital-information-systems",
+    authorName: "Richard Neumann",
+    description:
+      "A secure AI assistant for hospital systems that simplifies clinical documentation through voice commands.",
+    videoUrl: "https://www.youtube.com/embed/QSFcEtizvto",
+  },
+  {
+    name: "Evaluating Movie Recommendation Systems using LLMs",
+    uri: "movie-recommendation-systems-llms",
+    authorName: "Rok Kovac",
+    website: "https://rokkovach.github.io/kovac_650.070/",
+    image: "card_covers/rok-kovac.png",
+    description:
+      "Website presentation for class project, where we evaluated different recommendation systems.",
+  },
+  {
+    name: "Hunting the Duck",
+    uri: "hunting-the-duck",
+    authorName: "Nils Klenk",
+    description:
+      "Layered defenses and Wazuh-based behavioral detection against RubberDucky keystroke-injection attacks on Windows.",
+  },
+  {
+    name: "Lung Mask Segmentation with SAM",
+    uri: "lung-mask-segmentation-sam",
+    authorName: "Mitra Barkeshloomansouri",
+    website: "https://mitramansouri.github.io/sam-lung-segmentation/",
+    image: "card_covers/mitra-barkeshloomansouri.png",
+    description:
+      "This project investigates whether the Segment Anything Model can be adapted from general image segmentation to lung masks in chest CT scans by fine-tuning the mask decoder.",
+  },
+  {
+    name: "The Zero-Day Trap: Can AI Stop a Scam it Has Never Seen Before?",
+    uri: "zero-day-trap",
+    authorName: "Christos Tasioudis",
+    description:
+      'How RoBERTa models bridges the "Generalization Gap" by detecting the semantic intent of "Zero-Day" phishing attacks that traditional filters miss.',
+    videoUrl: "https://www.youtube.com/embed/2TxsY1mpSxY",
+  },
+  {
+    name: "Does the News Influence the Crypto and Stock Market the Next Day?",
+    uri: "news-influence-crypto-stock-market",
+    authorName: "Lukas Egger",
+    description:
+      "FinBERT predicts market direction from headlines and tests signals with a trading backtest.",
+    website:
+      "https://drive.google.com/file/d/1SlOfmDI3IRdylBHqiBik7oh45XecSqS9/view?usp=share_link",
+    image: "card_covers/lukas-egger.png",
+  },
+  {
+    name: "A Case Study: Solving A Murder using Machine Learning Methods",
+    uri: "solving-a-murder-with-ml",
+    authorName: "Lisa Papitsch",
+    description:
+      "Help solve a crime by using the naive bayes classifier to find the cold-blooded murderer of a journalist based on statistical analysis and linguistic data.",
+    website:
+      "https://drive.google.com/file/d/11Vsaknk4KG123IWcEQOGC8XHdhLBIBhn/view?usp=sharing",
+    image: "card_covers/lisa-papitsch.png",
+    slidesUrl: "presentations/lisa-papitsch.pdf",
+  },
+  {
+    name: "Garbage In, Garbage Out: Preparing Data for AOE4 Strategy Discovery",
+    uri: "garbage-in-garbage-out-aoe4",
+    authorName: "Deniese Lafleur",
+    description:
+      "How careful data preparation, not a bigger model, took AOE4 strategy classification from 82% to 99%.",
+    videoUrl: "https://www.youtube.com/embed/sHjmH49kfAE",
+  },
+  {
+    name: "Multi-agent Communication Patterns comparison: Agents-as-Tools vs Handoff",
+    uri: "multi-agent-communication-patterns",
+    authorName: "Arina Iusupova",
+    description:
+      "A look into multi-agent communication patterns and how they perform",
+    videoUrl: "https://www.youtube.com/embed/kQrmWSo3erQ",
+  },
+  {
     name: "Slides Project",
     uri: "slides-project",
     description: "Test project to test slides visualization",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula elit a velit facilisis aliquet. Quisque iaculis imperdiet magna quis dignissim. Quisque id tortor et ipsum elementum commodo. Integer euismod nunc sed mattis ultricies. Aenean nec rutrum eros, ut placerat nisl. Vivamus luctus cursus lorem. Nunc maximus volutpat dui, luctus venenatis dui.\n\nNullam commodo hendrerit convallis. Fusce consequat elementum dignissim. Curabitur ultricies neque sed diam molestie, at vehicula ex porta. Nullam vel iaculis diam. Maecenas elementum dignissim lectus vel ornare. Morbi at urna molestie, sodales neque sed, varius lectus. Nunc lectus augue, dignissim quis congue et, porttitor vel leo. Cras vulputate ullamcorper orci, a convallis ipsum ultrices commodo.",
     slides: [
      "https://powerpointschool.com/wp-content/uploads/2018/05/Animated-PowerPoint-Presentation-Slide-Template-by-PowerPoint-School.png",
      "https://www.slideegg.com/image/catalog/100860-best-ppt-templates-for-project-presentation.png",

@@ -46,7 +46,6 @@ export default function TeamGrid({ members }) {
             <TeamMemberCard
               key={member.name}
               name={member.name}
-              role={member.role}
               avatar={member.avatar}
             />
           ))}
